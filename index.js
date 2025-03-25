@@ -13,6 +13,17 @@ function renderOneProduct(product){
     `;
 
 productContainer.append(div);
+
+let button = div.querySelector(".btn")
+button.addEventListener("click", () => {
+    button.disabled = true
+    button.textContent = "Added to Cart"
+
+    setTimeout(() => {
+        button.disabled = false
+        button.textContent = "Add to Cart"
+    },2000);
+})
 }
 
 
@@ -43,6 +54,17 @@ function getAllProducts(){
     `;
 
     latestContainer.append(div);
+
+    let button = div.querySelector(".btn")
+button.addEventListener("click", () => {
+    button.disabled = true
+    button.textContent = "Added to Cart"
+
+    setTimeout(() => {
+        button.disabled = false
+        button.textContent = "Add to Cart"
+    },2000);
+})
  }
 
  function getLatestProducts(){
@@ -67,10 +89,21 @@ function getAllProducts(){
      <h1>Rolex Daytona - The triumph of endurance</h1>
      <img src = "${offer.image}" class="offer-img">
      <small"> ${offer.description}</small><br>
-      <a href="" class="btn">Buy Now</a>
+      <button class="btn">Buy Now</button>
     `;
     
-    offerContainer.append(div); 
+    offerContainer.append(div);
+    
+    let button = div.querySelector(".btn")
+button.addEventListener("click", () => {
+    button.disabled = true
+    button.textContent = "Added to Cart"
+
+    setTimeout(() => {
+        button.disabled = false
+        button.textContent = "Add to Cart"
+    },2000);
+})
  }
 
  function getOffer(){
@@ -84,4 +117,6 @@ function getAllProducts(){
  }
 
  getOffer()
+
+ 
 })
