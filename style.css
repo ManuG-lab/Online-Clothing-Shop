@@ -41,13 +41,13 @@ p{
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
-    background-color: white;
-    opacity:0.4;
+    background-color: gray;
+   
     
 }
  body{
     background-color: gray;
-    background-image: url(assets/background-2.jpg);
+    background-image: url(assets/background-3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -159,7 +159,7 @@ p{
     background:white;
     margin-top: 80px;
     padding: 30px 0;
-    opacity: 0.8;
+    opacity: 0.4;
 
  }
 

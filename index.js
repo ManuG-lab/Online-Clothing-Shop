@@ -8,7 +8,7 @@ function renderOneProduct(product){
     div.innerHTML = `
     <img src = "${product.image}">
     <h4>${product.name}</h4>
-    <p class="price">${product.price}</p>
+    <p class="price"> KSH ${product.price}</p>
     <button class="btn">Add to Cart</button>
     `;
 
@@ -29,4 +29,59 @@ function getAllProducts(){
 
  getAllProducts()
 
+
+
+ let latestContainer = document.querySelector("#latest-products")
+ function renderLatest(latest){
+    let div = document.createElement("div");
+    div.className = "col-4"
+    div.innerHTML = `
+    <img src = "${latest.image}">
+    <h4>${latest.name}</h4>
+    <p class="price"> KSH ${latest.price}</p>
+    <button class="btn">Add to Cart</button>
+    `;
+
+    latestContainer.append(div);
+ }
+
+ function getLatestProducts(){
+    fetch("http://localhost:3000/latestProducts")
+    .then(res => res.json())
+    .then(latestProducts => {
+        console.log(latestProducts)
+        latestProducts.forEach(latest => 
+            renderLatest(latest))
+    })
+ }
+
+ getLatestProducts();
+
+
+ let offerContainer = document.querySelector("#offer-section")
+ function renderOffer(offer){
+    let div = document.createElement("div");
+    div.className = "col-2"
+    div.innerHTML = `
+     <p>Exclusively Available on VougeNest</p>
+     <h1>Rolex Daytona - The triumph of endurance</h1>
+     <img src = "${offer.image}" class="offer-img">
+     <small"> ${offer.description}</small><br>
+      <a href="" class="btn">Buy Now</a>
+    `;
+    
+    offerContainer.append(div); 
+ }
+
+ function getOffer(){
+    fetch("http://localhost:3000/offerSection")
+    .then(res => res.json())
+    .then(offerSection => {
+        console.log(offerSection)
+        offerSection.forEach(offer =>
+            renderOffer(offer))
+    })
+ }
+
+ getOffer()
 })
