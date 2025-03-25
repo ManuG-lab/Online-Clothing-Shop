@@ -1,0 +1,30 @@
+{
+    "featuredProducts":[
+        { "id":1,
+          "name":"Adiddas Sweatshirt",
+          "price":3000, 
+          "image":"./assets/black fedora.jpg"
+        },
+
+        { "id":2, 
+          "name":"LeT-Shirt", 
+          "price":2000, 
+          "image":"assets/LeTshirt.jpg"
+        },
+
+        { "id":3, 
+          "name":"Wedding Gown", 
+          "price":20000, 
+          "image":"assets/wedding gown.jpg"
+        },
+
+
+        { "id":4, 
+          "name":"Black Fedora", 
+          "price":3000, 
+          "image":"assets/black fedora.jpg"
+        
+        }
+
+    ]
+}
