@@ -18,11 +18,15 @@ let button = div.querySelector(".btn")
 button.addEventListener("click", () => {
     button.disabled = true
     button.textContent = "Added to Cart"
+    button.style.background = "gold"
+    button.style.color = "black"
 
     setTimeout(() => {
         button.disabled = false
         button.textContent = "Add to Cart"
-    },2000);
+        button.style.background = "black"
+        button.style.color = "white"
+    },1000);
 })
 }
 
@@ -59,10 +63,14 @@ function getAllProducts(){
 button.addEventListener("click", () => {
     button.disabled = true
     button.textContent = "Added to Cart"
+    button.style.background = "gold"
+    button.style.color = "black"
 
     setTimeout(() => {
         button.disabled = false
         button.textContent = "Add to Cart"
+        button.style.background = "black"
+        button.style.color = "white"
     },2000);
 })
  }
@@ -98,10 +106,15 @@ button.addEventListener("click", () => {
 button.addEventListener("click", () => {
     button.disabled = true
     button.textContent = "Added to Cart"
+    button.style.background = "gold"
+    button.style.color = "black"
+
 
     setTimeout(() => {
         button.disabled = false
         button.textContent = "Add to Cart"
+        button.style.background = "black"
+        button.style.color = "white"
     },2000);
 })
  }
