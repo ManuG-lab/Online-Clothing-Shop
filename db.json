@@ -79,11 +79,140 @@
   
   }
     ],
+
+
     "offerSection":[
       {
         "image": "assets/mechanical watch.jpg",
-        "description": "The Oyster Perpetual Cosmograph Daytona in Oystersteel with a white dial and contrasting counter rings. It features an Oyster bracelet and a black Cerachrom bezel with tachymetric scale.<br>A key part of the model’s identity is the bezel moulded with a tachymetric scale for measuring average speeds of up to 400 miles or kilometres per hour. Blending high technology with sleek aesthetics, the black bezel is reminiscent of the 1965 model that was fitted with a black Plexiglas bezel insert.<br>The monobloc Cerachrom bezel in high-tech ceramic offers a number of advantages:<br>it is corrosion resistant, virtually scratchproof and the colour is unaffected by UV rays.<br>This extremely durable bezel also offers an exceptionally legible tachymetric scale, thanks to the deposition of a thin layer of platinum in the numerals and graduations via a PVD (Physical Vapour Deposition) process. The monobloc Cerachrom bezel is made in a single piece and holds the crystal firmly in place on the middle case, ensuring waterproofness.<br>This model features a white dial with snailed counters, 18 ct gold applique hour markers and hands with a Chromalight display, a highly-legible luminescent material. The dial allows drivers to accurately map out their track times and tactics without fail.Rolex uses Oystersteel for its steel watch cases.<br>Specially developed by the brand, Oystersteel belongs to the 904L steel family, alloys most commonly used in high-technology and in the aerospace and chemical industries, where maximum resistance to corrosion is essential.Oystersteel is extremely resistant, offers an exceptional finish once polished and maintains its beauty even in the harshest environments.<br>The design, development and production of Rolex bracelets and clasps, as well as the stringent tests they face, involve advanced high technology. And, as with all the components of the watch, aesthetic controls by the human eye guarantee impeccable beauty.<br>The Oyster bracelet is a perfect alchemy of form and function. First introduced in the late 1930s, this particularly robust and comfortable metal bracelet with its broad, flat three-piece links remains the most universal bracelet in the Oyster collection."
+        "description": "The Oyster Perpetual Cosmograph Daytona in Oystersteel with a white dial and contrasting counter rings. It features an Oyster bracelet and a black Cerachrom bezel with tachymetric scale.A key part of the model’s identity is the bezel moulded with a tachymetric scale for measuring average speeds of up to 400 miles or kilometres per hour. Blending high technology with sleek aesthetics, the black bezel is reminiscent of the 1965 model that was fitted with a black Plexiglas bezel insert.The monobloc Cerachrom bezel in high-tech ceramic offers a number of advantages:<br>it is corrosion resistant, virtually scratchproof and the colour is unaffected by UV rays."
       }
+    ],
+
+    "mainProducts":[
+      { "id":13,
+      "name":"Gray Checkered Pant",
+      "price":3000, 
+      "image":"assets/gray checkered pants.jpg"
+    },
+
+    { "id":14, 
+      "name":"Stylish Ripped Jeans", 
+      "price":2000, 
+      "image":"assets/blue ripped jeans.jpg"
+    },
+
+    { "id":14, 
+      "name":"Black Jeans", 
+      "price":2200, 
+      "image":"assets/baggy black jeans.jpg"
+    },
+
+    { "id":16, 
+      "name":"BAPE T-Shirt", 
+      "price":3000, 
+      "image":"assets/BAPE shirt.jpg"
+    
+    },
+
+    { "id":17,
+    "name":"Black Heels",
+    "price":4000, 
+    "image":"assets/black 5 ' heel boots.jpg"
+  },
+
+  { "id":18,
+  "name":"Gray Checkered Pant",
+  "price":3000, 
+  "image":"assets/gray checkered pants.jpg"
+},
+
+{ "id":19, 
+  "name":"Stylish Ripped Jeans", 
+  "price":2000, 
+  "image":"assets/blue ripped jeans.jpg"
+},
+
+{ "id":20, 
+  "name":"Black Jeans", 
+  "price":2200, 
+  "image":"assets/baggy black jeans.jpg"
+},
+
+{ "id":21, 
+  "name":"BAPE T-Shirt", 
+  "price":3000, 
+  "image":"assets/BAPE shirt.jpg"
+
+},
+
+{ "id":22,
+"name":"Black Heels",
+"price":4000, 
+"image":"assets/black 5 ' heel boots.jpg"
+},
+
+{ "id":23,
+"name":"Gray Checkered Pant",
+"price":3000, 
+"image":"assets/gray checkered pants.jpg"
+},
+
+{ "id":24, 
+"name":"Stylish Ripped Jeans", 
+"price":2000, 
+"image":"assets/blue ripped jeans.jpg"
+},
+
+{ "id":24, 
+"name":"Black Jeans", 
+"price":2200, 
+"image":"assets/baggy black jeans.jpg"
+},
+
+{ "id":26, 
+"name":"BAPE T-Shirt", 
+"price":3000, 
+"image":"assets/BAPE shirt.jpg"
+
+},
+
+{ "id":27,
+"name":"Black Heels",
+"price":4000, 
+"image":"assets/black 5 ' heel boots.jpg"
+},
+
+{ "id":28,
+"name":"Gray Checkered Pant",
+"price":3000, 
+"image":"assets/gray checkered pants.jpg"
+},
+
+{ "id":29, 
+"name":"Stylish Ripped Jeans", 
+"price":2000, 
+"image":"assets/blue ripped jeans.jpg"
+},
+
+{ "id":30, 
+"name":"Black Jeans", 
+"price":2200, 
+"image":"assets/baggy black jeans.jpg"
+},
+
+{ "id":31, 
+"name":"BAPE T-Shirt", 
+"price":3000, 
+"image":"assets/BAPE shirt.jpg"
+
+},
+
+{ "id":32,
+"name":"Black Heels",
+"price":4000, 
+"image":"assets/black 5 ' heel boots.jpg"
+}
     ]
+
 
 }

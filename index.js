@@ -99,13 +99,13 @@ button.addEventListener("click", () => {
      <h1>Rolex Daytona - The triumph of endurance</h1>
      <img src = "${offer.image}" class="offer-img">
      <small"> ${offer.description}</small><br>
-      <button class="btn">Buy Now</button>
+      <button class = "btn">Buy Now</button>
     `;
     
     offerContainer.append(div);
     
     let button = div.querySelector(".btn")
-button.addEventListener("click", () => {
+    button.addEventListener("click", () => {
     button.disabled = true
     button.textContent = "Added to Cart"
     button.style.background = "gold"
@@ -133,5 +133,48 @@ button.addEventListener("click", () => {
 
  getOffer()
 
- 
+
+ let mainContainer = document.querySelector("#main-products")
+ function renderMain(main){
+    let div = document.createElement("div");
+    div.className = "col-4"
+    div.innerHTML = `
+     <img src = "${main.image}">
+    <h4>${main.name}</h4>
+    <p class="price"> KSH ${main.price}</p>
+    <button class="btn">Add to Cart</button>
+    `;
+    
+    mainContainer.append(div);
+
+
+    let button = div.querySelector(".btn")
+    button.addEventListener("click", () => {
+    button.disabled = true
+    button.textContent = "Added to Cart"
+    button.style.background = "gold"
+    button.style.color = "black"
+
+
+    setTimeout(() => {
+        button.disabled = false
+        button.textContent = "Add to Cart"
+        button.style.background = "black"
+        button.style.color = "white"
+    },2000);
+})  
+ }
+
+ function getMain(){
+    fetch("http://localhost:3000/mainProducts")
+    .then(res => res.json())
+    .then(mainProducts => {
+        console.log(mainProducts)
+        mainProducts.forEach(main =>
+            renderMain(main))
+    })
+ }
+
+ getMain()
+
 })
