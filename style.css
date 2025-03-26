@@ -420,3 +420,163 @@ p{
   font-size: 35px;
   cursor: pointer;
 }
+
+.wrapper{
+  margin-top: 150px;
+  margin-left: 500px;
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background:transparent;
+  border: 2px solid rgba(255, 255, 255, .5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow:0 0 30px rgba(0, 0, 0, .5) ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform: scale(0);
+  transition:transform .5s ease, height 2s ease;
+
+  }
+  .wrapper.active-popup{
+    transform: scale(1);
+    }
+    .wrapper.active{
+    height: 520px;
+    }
+
+  .wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+    }
+
+    .wrapper.active .form-box-login{
+      transition: transform .18s ease;
+      transform: translateX(0);
+      }
+      
+      .wrapper.active .form-box-login{
+      transition: none;
+      transform: translateX(-400px);
+      }
+
+    .wrapper .form-box-register{
+      position: absolute;
+      transition: none;
+      transform: translateX(400px);
+      }
+
+      .wrapper.active .form-box-register{
+        transition: transform .18s ease;
+        transform: translateX(0);
+        }
+
+
+      
+
+    .wrapper .form-box{
+      width: 100%;
+      padding: 40px;
+      }
+      .form-box h2{
+        font-size: 2em;
+        color: black;
+        text-align: center;
+        }
+
+        .input-box{
+          position: relative;
+          width: 100%;
+          height: 50px;
+          border-bottom: 2px solid black;
+          margin: 30px 0;
+          }
+          
+          .input-box label{
+          position: absolute;
+          top: 50%;
+          left: 5px;
+          transform: translateY(-50%);
+          color: black;
+          font-weight: 500;
+          pointer-events: none;
+          transition: 0.5s;
+          }
+          .input-box input:focus~label,
+          .input-box input:focus~label{
+            top: -5px;
+          }
+          
+          .input-box input{
+          width: 100%;
+          height: 100%;
+          background: transparent;
+          border: none;
+          outline: none;
+          font-size: 1em;
+          font-weight: 600;
+          padding: 0 35px 0 5px;
+          }
+          
+          .remember-forgot{
+          font-size: 0.9em;
+          font-weight: 500;
+          display: flex;
+          justify-content: space-between;
+          margin: -15px 0 15px;
+          }
+          
+          .remember-forgot label input{
+          accent-color: black;
+          margin-right: 3px;
+          }
+          
+          .remember-forgot a{
+          text-decoration: none;
+          }
+          .remember-forgot a:hover{
+          text-decoration: underline;
+          }
+          
+          .button{
+          width: 100%;
+          height: 45px;
+          background: black;
+          border: none;
+          border-radius: 6px;
+          cursor: pointer;
+          color: white;
+          font-weight: 500;
+          }
+          
+          .login-register{
+          font-size: 0.9em;
+          color: black;
+          text-align: center;
+          font-weight: 500;
+          margin: 25px 0 10px;
+          
+          }
+          
+          .login-register p a{
+          text-decoration: none;
+          font-weight: 500;
+          
+          }
+          
+          .login-register p a:hover{
+          text-decoration: underline;
+          }
+          

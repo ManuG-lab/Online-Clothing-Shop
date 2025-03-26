@@ -134,6 +134,7 @@ button.addEventListener("click", () => {
 
  getOffer()
 
+//---------------------main products------------------------------------
 
  let mainContainer = document.querySelector("#main-products")
  function renderMain(main){
@@ -190,4 +191,34 @@ cartIcon.addEventListener("click", () => cart.classList.add("active"));
 cartClose.addEventListener("click", () => cart.classList.remove("active"));
 
 
+
+//--------------------------------------
+
+const wrapper = document.querySelector(".wrapper")
+const loginLink = document.querySelector(".login-link")
+const registerLink = document.querySelector(".register-link")
+const btnPopUp = document.querySelector(".btnPopUp")
+const iconClose = document.querySelector(".icon-close")
+
+registerLink.addEventListener("click", () => {
+    wrapper.classList.add("active");
+});
+
+loginLink.addEventListener("click", () => {
+    wrapper.classList.remove("active");
+});
+
+btnPopUp.addEventListener("click", () => {
+    wrapper.classList.add("active-popup");
+});
+
+iconClose.addEventListener("click", () => {
+    wrapper.classList.remove("active-popup");
+});
+
+document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", function(event){
+        event.preventDefault();
+    })
+})
 });
