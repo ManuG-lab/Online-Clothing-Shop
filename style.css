@@ -46,7 +46,7 @@ p{
     
 }
  body{
-    background-color: gray;
+    /*background-color: gray;*/
     background-image: url(assets/background-3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -236,3 +236,66 @@ p{
   margin: 0;
   width: 100%;
  }
+
+
+ /*-----------footer css---------------*/
+
+ .footer{
+  background:gray;
+  color: white;
+  font-size: 14px;
+  padding:60px 0 20px;
+  opacity: 0.5;
+ }
+
+ .footer p{
+  color: white;
+
+ }
+
+ .footer h3{
+  color: white;
+  margin-bottom: 20px;
+
+ }
+
+ .footer-col-1, .footer-col-2, .footer-col-3,.footer-col-4{
+  min-width: 25px;
+  margin-bottom: 20px;
+ }
+ .footer-col-1{
+  flex-basis: 30%;
+ }
+ .footer-col-2{
+  flex: 1;
+  text-align: center;
+ }
+.footer-col-2 img{
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.footer-col-3, .footer-col-4{
+  flex-basis: 12%;
+  text-align: center;
+}
+
+.footer-col-4 ul li{
+  list-style-type: none;
+  color: white;
+}
+.footer-col-3 ul{
+  color: white;
+}
+
+.footer-col-1 h3{
+  color: white;
+}
+
+.app-logo{
+  margin-top: 20px;
+}
+
+.app-logo img{
+  width: 140px;
+}
