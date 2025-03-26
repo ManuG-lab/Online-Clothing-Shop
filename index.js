@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    //--------load featured products-----------
 
 let productContainer = document.querySelector("#featured-products")
 function renderOneProduct(product){
@@ -44,7 +45,7 @@ function getAllProducts(){
 
  getAllProducts()
 
-
+//------------load latest products------------------------------
 
  let latestContainer = document.querySelector("#latest-products")
  function renderLatest(latest){
@@ -87,6 +88,7 @@ button.addEventListener("click", () => {
 
  getLatestProducts();
 
+ //-------------------load offer section-----------------------------
 
  let offerContainer = document.querySelector("#offer-section")
  function renderOffer(offer){
