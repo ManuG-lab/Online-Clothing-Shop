@@ -8,7 +8,7 @@
     <script src="index.js"></script>
 </head>
 
-<body>
+<body class="">
     <div class="header">
     <div class="container">
     <div class="navbar">
@@ -24,7 +24,8 @@
                 <LI><a href="">Account</a></LI>
             </uL>
         </nav>
-        <img src="assets/shopping-cart.png" alt="cart" width="30px" height="30px">
+        <img src="assets/shopping-cart.png" alt="cart" width="30px" height="30px" id="cart-icon">
+        <span class="cart-number">0</span>
     </div>
 
     <div class="row">
@@ -36,8 +37,33 @@
         </div> 
     </div>
 
+    <div class="cart">
+        <h2 class="cart-title">Your Cart</h2>
+        <div class="cart-content">
+            <div class="cart-box">
+                <img src="assets/ADIDDAS sweatshirt.jpg" alt="">
+                <div class="cart-detail">
+                    <h2 class="cart-product-title">Addidas Sweatshirt</h2>
+                    <span class="cart-price">KSH 3000</span>
+                    <div class="cart-quantity">
+                        <button id="decrement">-</button>
+                        <button class="number">1</button>
+                        <button id="increment">+</button>
+                    </div>
+                </div>
+               <button class="cart-remove">X</button>
+            </div>
+        </div>
+        <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">KSH 0</div>
+        </div>
+        <button class="btn-buy">Buy Now</button>
+        <button id="cart-close">X</button>
 
+    </div>
 
+   
     <!---------Preview-------->
 
     <div class="categories">

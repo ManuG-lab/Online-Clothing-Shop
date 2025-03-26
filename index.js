@@ -5,10 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
 let productContainer = document.querySelector("#featured-products")
 function renderOneProduct(product){
     let div = document.createElement("div");
+    div.dataset.id = product.id
     div.className = "col-4"
     div.innerHTML = `
-    <img src = "${product.image}">
-    <h4>${product.name}</h4>
+    <img src = "${product.image}" class = "img-box">
+    <h4 class ="product-title">${product.name}</h4>
     <p class="price"> KSH ${product.price}</p>
     <button class="btn">Add to Cart</button>
     `;
@@ -52,8 +53,8 @@ function getAllProducts(){
     let div = document.createElement("div");
     div.className = "col-4"
     div.innerHTML = `
-    <img src = "${latest.image}">
-    <h4>${latest.name}</h4>
+    <img src = "${latest.image}" class = "img-box">
+    <h4 class = "product-title">${latest.name}</h4>
     <p class="price"> KSH ${latest.price}</p>
     <button class="btn">Add to Cart</button>
     `;
@@ -139,8 +140,8 @@ button.addEventListener("click", () => {
     let div = document.createElement("div");
     div.className = "col-4"
     div.innerHTML = `
-     <img src = "${main.image}">
-    <h4>${main.name}</h4>
+     <img src = "${main.image}" class = "img-box">
+    <h4 class = "product-title">${main.name}</h4>
     <p class="price"> KSH ${main.price}</p>
     <button class="btn">Add to Cart</button>
     `;
@@ -177,4 +178,16 @@ button.addEventListener("click", () => {
 
  getMain()
 
-})
+
+//------------------------------cart section-----------------------------------------------
+
+
+const cartIcon = document.querySelector("#cart-icon")
+const cart = document.querySelector(".cart")
+const cartClose = document.querySelector("#cart-close")
+
+cartIcon.addEventListener("click", () => cart.classList.add("active"));
+cartClose.addEventListener("click", () => cart.classList.remove("active"));
+
+
+});
