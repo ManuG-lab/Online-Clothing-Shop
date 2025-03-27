@@ -36,6 +36,7 @@ function addToCart(product){
 function updateCartDisplay(){
     const cartContent = document.querySelector(".cart-content")
     
+    cartContent.innerHTML = "";
     if(carts.length > 0){
         carts.forEach(item => {
             const cartBox = document.createElement("div")
@@ -89,7 +90,7 @@ button.addEventListener("click", () => {
         button.textContent = "Add to Cart"
         button.style.background = "black"
         button.style.color = "white"
-    },1000);
+    },500);
 })
 
 }
@@ -114,6 +115,7 @@ function getAllProducts(){
  let latestContainer = document.querySelector("#latest-products")
  function renderLatest(latest){
     let div = document.createElement("div");
+    div.dataset.id = latest.id
     div.className = "col-4"
     div.innerHTML = `
     <img src = "${latest.image}" class = "img-box">
@@ -122,8 +124,69 @@ function getAllProducts(){
     <button class="btn">Add to Cart</button>
     `;
 
+    div.querySelector(".btn").addEventListener("click", () =>{
+        addToCart(latest)
+     })
+
     latestContainer.append(div);
 
+    function addToCart(latest){
+        const existingIndex = carts.findIndex(item => item.id === latest.id);
+    
+        if(existingIndex > -1){
+            carts[existingIndex].quantity += 1;
+        }else{
+            carts.push({ ...latest, quantity: 1});
+        }
+    
+        console.log(carts);
+        updateCartDisplay();
+    }
+    function updateCartDisplay(){
+        const cartContent = document.querySelector(".cart-content")
+        
+        cartContent.innerHTML = "";
+        if(carts.length > 0){
+            carts.forEach(item => {
+                const cartBox = document.createElement("div")
+                cartBox.className = "cart-box"
+                cartBox.innerHTML =`
+                 <img src ="${item.image}"
+                 <h4 class="cart-product-title">${item.name}</h4>
+                 <p class="cart-price">Price: KSH ${item.price}</p>
+                 <p class="cart-quantity">Quantity: ${item.quantity}</p>
+                `;
+                cartContent.append(cartBox)
+        
+            });
+        }else{
+            cartContent.innerHTML = "<p>Your cart is empty</p>"
+        }
+    }
+
+    function saveToServer(){
+        fetch("http://localhost:3000/carts", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body:JSON.stringify(carts)
+        })
+        .then(response => {
+            if(!response.ok){
+                throw new Error("Network response not ok");
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log("cart saved")
+        })
+        .catch(error => {
+            console.log("error saving cart")
+        })
+    }
+     document.getElementById("save-cart").addEventListener("click", saveToServer)
+    
     let button = div.querySelector(".btn")
 button.addEventListener("click", () => {
     button.disabled = true
@@ -165,6 +228,7 @@ button.addEventListener("click", () => {
      <small> ${offer.description}</small><br>
       <button class = "btn">Buy Now</button>
     `;
+    
    
 
     
@@ -204,6 +268,7 @@ button.addEventListener("click", () => {
  let pantsContainer = document.querySelector("#pants-container")
  function renderPants(pants){
     let div = document.createElement("div");
+    div.dataset.id = pants.id
     div.className = "col-4"
     div.innerHTML = `
      <img src = "${pants.image}" class = "img-box">
@@ -211,9 +276,70 @@ button.addEventListener("click", () => {
     <p class="price"> KSH ${pants.price}</p>
     <button class="btn">Add to Cart</button>
     `;
+
+    div.querySelector(".btn").addEventListener("click", () =>{
+        addToCart(pants)
+     })
     
     pantsContainer.append(div);
 
+    function addToCart(pants){
+        const existingIndex = carts.findIndex(item => item.id === pants.id);
+    
+        if(existingIndex > -1){
+            carts[existingIndex].quantity += 1;
+        }else{
+            carts.push({ ...pants, quantity: 1});
+        }
+    
+        console.log(carts);
+        updateCartDisplay();
+    }
+    function updateCartDisplay(){
+        const cartContent = document.querySelector(".cart-content")
+        
+        cartContent.innerHTML = "";
+        if(carts.length > 0){
+            carts.forEach(item => {
+                const cartBox = document.createElement("div")
+                cartBox.className = "cart-box"
+                cartBox.innerHTML =`
+                 <img src ="${item.image}"
+                 <h4 class="cart-product-title">${item.name}</h4>
+                 <p class="cart-price">Price: KSH ${item.price}</p>
+                 <p class="cart-quantity">Quantity: ${item.quantity}</p>
+                `;
+                cartContent.append(cartBox)
+        
+            });
+        }else{
+            cartContent.innerHTML = "<p>Your cart is empty</p>"
+        }
+    }
+    
+    function saveToServer(){
+        fetch("http://localhost:3000/carts", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body:JSON.stringify(carts)
+        })
+        .then(response => {
+            if(!response.ok){
+                throw new Error("Network response not ok");
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log("cart saved")
+        })
+        .catch(error => {
+            console.log("error saving cart")
+        })
+    }
+     document.getElementById("save-cart").addEventListener("click", saveToServer)
+    
 
     let button = div.querySelector(".btn")
     button.addEventListener("click", () => {
@@ -250,6 +376,7 @@ button.addEventListener("click", () => {
  let shoesContainer = document.querySelector("#shoes-container")
  function renderShoes(shoes){
     let div = document.createElement("div");
+    div.dataset.id = shoes.id
     div.className = "col-4"
     div.innerHTML = `
      <img src = "${shoes.image}" class = "img-box">
@@ -257,8 +384,70 @@ button.addEventListener("click", () => {
     <p class="price"> KSH ${shoes.price}</p>
     <button class="btn">Add to Cart</button>
     `;
+
+    div.querySelector(".btn").addEventListener("click", () =>{
+        addToCart(shoes);
+     })
     
     shoesContainer.append(div);
+
+    function addToCart(shoes){
+        const existingIndex = carts.findIndex(item => item.id === shoes.id);
+    
+        if(existingIndex > -1){
+            carts[existingIndex].quantity += 1;
+        }else{
+            carts.push({ ...shoes, quantity: 1});
+        }
+    
+        console.log(carts);
+        updateCartDisplay();
+    }
+    function updateCartDisplay(){
+        const cartContent = document.querySelector(".cart-content")
+        
+        cartContent.innerHTML = "";
+        if(carts.length > 0){
+            carts.forEach(item => {
+                const cartBox = document.createElement("div")
+                cartBox.className = "cart-box"
+                cartBox.innerHTML =`
+                 <img src ="${item.image}"
+                 <h4 class="cart-product-title">${item.name}</h4>
+                 <p class="cart-price">Price: KSH ${item.price}</p>
+                 <p class="cart-quantity">Quantity: ${item.quantity}</p>
+                `;
+                cartContent.append(cartBox)
+        
+            });
+        }else{
+            cartContent.innerHTML = "<p>Your cart is empty</p>"
+        }
+    }
+    
+    function saveToServer(){
+        fetch("http://localhost:3000/carts", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body:JSON.stringify(carts)
+        })
+        .then(response => {
+            if(!response.ok){
+                throw new Error("Network response not ok");
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log("cart saved")
+        })
+        .catch(error => {
+            console.log("error saving cart")
+        })
+    }
+     document.getElementById("save-cart").addEventListener("click", saveToServer)
+    
 
 
     let button = div.querySelector(".btn")
@@ -296,6 +485,7 @@ button.addEventListener("click", () => {
  let suitsContainer = document.querySelector("#suits-container")
  function renderSuits(suits){
     let div = document.createElement("div");
+    div.dataset.id = suits.id
     div.className = "col-4"
     div.innerHTML = `
      <img src = "${suits.image}" class = "img-box">
@@ -303,8 +493,70 @@ button.addEventListener("click", () => {
     <p class="price"> KSH ${suits.price}</p>
     <button class="btn">Add to Cart</button>
     `;
+
+    div.querySelector(".btn").addEventListener("click", () =>{
+        addToCart(suits)
+     })
     
     suitsContainer.append(div);
+
+    function addToCart(suits){
+        const existingIndex = carts.findIndex(item => item.id === suits.id);
+    
+        if(existingIndex > -1){
+            carts[existingIndex].quantity += 1;
+        }else{
+            carts.push({ ...suits, quantity: 1});
+        }
+    
+        console.log(carts);
+        updateCartDisplay();
+    }
+    function updateCartDisplay(){
+        const cartContent = document.querySelector(".cart-content")
+        
+        cartContent.innerHTML = "";
+        if(carts.length > 0){
+            carts.forEach(item => {
+                const cartBox = document.createElement("div")
+                cartBox.className = "cart-box"
+                cartBox.innerHTML =`
+                 <img src ="${item.image}"
+                 <h4 class="cart-product-title">${item.name}</h4>
+                 <p class="cart-price">Price: KSH ${item.price}</p>
+                 <p class="cart-quantity">Quantity: ${item.quantity}</p>
+                `;
+                cartContent.append(cartBox)
+        
+            });
+        }else{
+            cartContent.innerHTML = "<p>Your cart is empty</p>"
+        }
+    }
+    
+    function saveToServer(){
+        fetch("http://localhost:3000/carts", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body:JSON.stringify(carts)
+        })
+        .then(response => {
+            if(!response.ok){
+                throw new Error("Network response not ok");
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log("cart saved")
+        })
+        .catch(error => {
+            console.log("error saving cart")
+        })
+    }
+     document.getElementById("save-cart").addEventListener("click", saveToServer)
+    
 
 
     let button = div.querySelector(".btn")
@@ -342,6 +594,7 @@ button.addEventListener("click", () => {
  let accessoriesContainer = document.querySelector("#accessories-container")
  function renderAccessories(accessories){
     let div = document.createElement("div");
+    div.dataset.id = accessories.id
     div.className = "col-4"
     div.innerHTML = `
      <img src = "${accessories.image}" class = "img-box">
@@ -349,8 +602,70 @@ button.addEventListener("click", () => {
     <p class="price"> KSH ${accessories.price}</p>
     <button class="btn">Add to Cart</button>
     `;
+
+    div.querySelector(".btn").addEventListener("click", () =>{
+        addToCart(accessories)
+     })
     
     accessoriesContainer.append(div);
+
+    function addToCart(accessories){
+        const existingIndex = carts.findIndex(item => item.id === accessories.id);
+    
+        if(existingIndex > -1){
+            carts[existingIndex].quantity += 1;
+        }else{
+            carts.push({ ...accessories, quantity: 1});
+        }
+    
+        console.log(carts);
+        updateCartDisplay();
+    }
+    function updateCartDisplay(){
+        const cartContent = document.querySelector(".cart-content")
+        
+        cartContent.innerHTML = "";
+        if(carts.length > 0){
+            carts.forEach(item => {
+                const cartBox = document.createElement("div")
+                cartBox.className = "cart-box"
+                cartBox.innerHTML =`
+                 <img src ="${item.image}"
+                 <h4 class="cart-product-title">${item.name}</h4>
+                 <p class="cart-price">Price: KSH ${item.price}</p>
+                 <p class="cart-quantity">Quantity: ${item.quantity}</p>
+                `;
+                cartContent.append(cartBox)
+        
+            });
+        }else{
+            cartContent.innerHTML = "<p>Your cart is empty</p>"
+        }
+    }
+    
+    function saveToServer(){
+        fetch("http://localhost:3000/carts", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body:JSON.stringify(carts)
+        })
+        .then(response => {
+            if(!response.ok){
+                throw new Error("Network response not ok");
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log("cart saved")
+        })
+        .catch(error => {
+            console.log("error saving cart")
+        })
+    }
+     document.getElementById("save-cart").addEventListener("click", saveToServer)
+    
 
 
     let button = div.querySelector(".btn")
