@@ -88,7 +88,7 @@
       }
     ],
 
-    "mainProducts":[
+    "pants":[
       { "id":13,
       "name":"Gray Checkered Pant",
       "price":3000, 
@@ -136,7 +136,11 @@
   "name":"Black Jeans", 
   "price":2200, 
   "image":"assets/baggy black jeans.jpg"
-},
+}
+
+    ],
+
+    "shoes":[
 
 { "id":21, 
   "name":"BAPE T-Shirt", 
@@ -186,33 +190,125 @@
 "name":"Gray Checkered Pant",
 "price":3000, 
 "image":"assets/gray checkered pants.jpg"
-},
-
-{ "id":29, 
-"name":"Stylish Ripped Jeans", 
-"price":2000, 
-"image":"assets/blue ripped jeans.jpg"
-},
-
-{ "id":30, 
-"name":"Black Jeans", 
-"price":2200, 
-"image":"assets/baggy black jeans.jpg"
-},
-
-{ "id":31, 
-"name":"BAPE T-Shirt", 
-"price":3000, 
-"image":"assets/BAPE shirt.jpg"
-
-},
-
-{ "id":32,
-"name":"Black Heels",
-"price":4000, 
-"image":"assets/black 5 ' heel boots.jpg"
 }
-    ]
+    ],
 
+    "suits":[
 
+      { "id":21, 
+        "name":"BAPE T-Shirt", 
+        "price":3000, 
+        "image":"assets/BAPE shirt.jpg"
+      
+      },
+      
+      { "id":22,
+      "name":"Black Heels",
+      "price":4000, 
+      "image":"assets/black 5 ' heel boots.jpg"
+      },
+      
+      { "id":23,
+      "name":"Gray Checkered Pant",
+      "price":3000, 
+      "image":"assets/gray checkered pants.jpg"
+      },
+      
+      { "id":24, 
+      "name":"Stylish Ripped Jeans", 
+      "price":2000, 
+      "image":"assets/blue ripped jeans.jpg"
+      },
+      
+      { "id":24, 
+      "name":"Black Jeans", 
+      "price":2200, 
+      "image":"assets/baggy black jeans.jpg"
+      },
+      
+      { "id":26, 
+      "name":"BAPE T-Shirt", 
+      "price":3000, 
+      "image":"assets/BAPE shirt.jpg"
+      
+      },
+      
+      { "id":27,
+      "name":"Black Heels",
+      "price":4000, 
+      "image":"assets/black 5 ' heel boots.jpg"
+      },
+      
+      { "id":28,
+      "name":"Gray Checkered Pant",
+      "price":3000, 
+      "image":"assets/gray checkered pants.jpg"
+      }
+          ],
+       
+      
+          "accessories":[
+
+            { "id":21, 
+              "name":"BAPE T-Shirt", 
+              "price":3000, 
+              "image":"assets/BAPE shirt.jpg"
+            
+            },
+            
+            { "id":22,
+            "name":"Black Heels",
+            "price":4000, 
+            "image":"assets/black 5 ' heel boots.jpg"
+            },
+            
+            { "id":23,
+            "name":"Gray Checkered Pant",
+            "price":3000, 
+            "image":"assets/gray checkered pants.jpg"
+            },
+            
+            { "id":24, 
+            "name":"Stylish Ripped Jeans", 
+            "price":2000, 
+            "image":"assets/blue ripped jeans.jpg"
+            },
+            
+            { "id":24, 
+            "name":"Black Jeans", 
+            "price":2200, 
+            "image":"assets/baggy black jeans.jpg"
+            },
+            
+            { "id":26, 
+            "name":"BAPE T-Shirt", 
+            "price":3000, 
+            "image":"assets/BAPE shirt.jpg"
+            
+            },
+            
+            { "id":27,
+            "name":"Black Heels",
+            "price":4000, 
+            "image":"assets/black 5 ' heel boots.jpg"
+            },
+            
+            { "id":28,
+            "name":"Gray Checkered Pant",
+            "price":3000, 
+            "image":"assets/gray checkered pants.jpg"
+            }
+                ],
+  "users": [
+    {
+      "id": "88fc",
+      "username": "",
+      "password": ""
+    },
+    {
+      "id": "4702",
+      "username": "",
+      "password": ""
+    }
+  ]
 }

@@ -134,20 +134,20 @@ button.addEventListener("click", () => {
 
  getOffer()
 
-//---------------------main products------------------------------------
+//---------------------pants products------------------------------------
 
- let mainContainer = document.querySelector("#main-products")
- function renderMain(main){
+ let pantsContainer = document.querySelector("#pants-container")
+ function renderPants(pants){
     let div = document.createElement("div");
     div.className = "col-4"
     div.innerHTML = `
-     <img src = "${main.image}" class = "img-box">
-    <h4 class = "product-title">${main.name}</h4>
-    <p class="price"> KSH ${main.price}</p>
+     <img src = "${pants.image}" class = "img-box">
+    <h4 class = "product-title">${pants.name}</h4>
+    <p class="price"> KSH ${pants.price}</p>
     <button class="btn">Add to Cart</button>
     `;
     
-    mainContainer.append(div);
+    pantsContainer.append(div);
 
 
     let button = div.querySelector(".btn")
@@ -167,17 +167,155 @@ button.addEventListener("click", () => {
 })  
  }
 
- function getMain(){
-    fetch("http://localhost:3000/mainProducts")
+ function getPants(){
+    fetch("http://localhost:3000/pants")
     .then(res => res.json())
-    .then(mainProducts => {
-        console.log(mainProducts)
-        mainProducts.forEach(main =>
-            renderMain(main))
+    .then(pantsProducts => {
+        console.log(pantsProducts)
+        pantsProducts.forEach(pants =>
+            renderPants(pants))
     })
  }
 
- getMain()
+ getPants()
+
+
+ //---------------------shoes products------------------------------------
+
+ let shoesContainer = document.querySelector("#shoes-container")
+ function renderShoes(shoes){
+    let div = document.createElement("div");
+    div.className = "col-4"
+    div.innerHTML = `
+     <img src = "${shoes.image}" class = "img-box">
+    <h4 class = "product-title">${shoes.name}</h4>
+    <p class="price"> KSH ${shoes.price}</p>
+    <button class="btn">Add to Cart</button>
+    `;
+    
+    shoesContainer.append(div);
+
+
+    let button = div.querySelector(".btn")
+    button.addEventListener("click", () => {
+    button.disabled = true
+    button.textContent = "Added to Cart"
+    button.style.background = "gold"
+    button.style.color = "black"
+
+
+    setTimeout(() => {
+        button.disabled = false
+        button.textContent = "Add to Cart"
+        button.style.background = "black"
+        button.style.color = "white"
+    },2000);
+})  
+ }
+
+ function getShoes(){
+    fetch("http://localhost:3000/shoes")
+    .then(res => res.json())
+    .then(shoeProducts => {
+        console.log(shoeProducts)
+        shoeProducts.forEach(shoes =>
+            renderShoes(shoes))
+    })
+ }
+
+ getShoes()
+
+
+ //---------------------suits products------------------------------------
+
+ let suitsContainer = document.querySelector("#suits-container")
+ function renderSuits(suits){
+    let div = document.createElement("div");
+    div.className = "col-4"
+    div.innerHTML = `
+     <img src = "${suits.image}" class = "img-box">
+    <h4 class = "product-title">${suits.name}</h4>
+    <p class="price"> KSH ${suits.price}</p>
+    <button class="btn">Add to Cart</button>
+    `;
+    
+    suitsContainer.append(div);
+
+
+    let button = div.querySelector(".btn")
+    button.addEventListener("click", () => {
+    button.disabled = true
+    button.textContent = "Added to Cart"
+    button.style.background = "gold"
+    button.style.color = "black"
+
+
+    setTimeout(() => {
+        button.disabled = false
+        button.textContent = "Add to Cart"
+        button.style.background = "black"
+        button.style.color = "white"
+    },2000);
+})  
+ }
+
+ function getSuits(){
+    fetch("http://localhost:3000/suits")
+    .then(res => res.json())
+    .then(suitsProducts => {
+        console.log(suitsProducts)
+        suitsProducts.forEach(suits =>
+            renderSuits(suits))
+    })
+ }
+
+ getSuits()
+
+
+ //---------------------accessories products------------------------------------
+
+ let accessoriesContainer = document.querySelector("#accessories-container")
+ function renderAccessories(accessories){
+    let div = document.createElement("div");
+    div.className = "col-4"
+    div.innerHTML = `
+     <img src = "${accessories.image}" class = "img-box">
+    <h4 class = "product-title">${accessories.name}</h4>
+    <p class="price"> KSH ${accessories.price}</p>
+    <button class="btn">Add to Cart</button>
+    `;
+    
+    accessoriesContainer.append(div);
+
+
+    let button = div.querySelector(".btn")
+    button.addEventListener("click", () => {
+    button.disabled = true
+    button.textContent = "Added to Cart"
+    button.style.background = "gold"
+    button.style.color = "black"
+
+
+    setTimeout(() => {
+        button.disabled = false
+        button.textContent = "Add to Cart"
+        button.style.background = "black"
+        button.style.color = "white"
+    },2000);
+})  
+ }
+
+ function getAccessories(){
+    fetch("http://localhost:3000/accessories")
+    .then(res => res.json())
+    .then(accessoriesProducts => {
+        console.log(accessoriesProducts)
+        accessoriesProducts.forEach(accessories =>
+            renderAccessories(accessories))
+    })
+ }
+
+ getAccessories()
 
 
 //------------------------------cart section-----------------------------------------------
@@ -192,7 +330,7 @@ cartClose.addEventListener("click", () => cart.classList.remove("active"));
 
 
 
-//--------------------------------------
+//--------------------login page------------------
 
 const wrapper = document.querySelector(".wrapper")
 const loginLink = document.querySelector(".login-link")
@@ -221,4 +359,65 @@ document.querySelectorAll("a").forEach(link => {
         event.preventDefault();
     })
 })
+
+const apiUrl = "http://localhost:3000/users"
+
+
+const username = document.getElementById('register-username').value;
+const password = document.getElementById('register-password').value;
+
+document.querySelector(".form-box-register").addEventListener("submit",function(event){
+    event.preventDefault();
+
+
+fetch(apiUrl)
+.then(response => response.json())
+.then(users => {
+    const userExists = users.find(user => user.username === username);
+    if (userExists) {
+        document.getElementById('message').innerText = 'User  already exists!';
+    } else {
+        // Save new user
+        const newUser  = { username, password };
+        fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newUser )
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('message').innerText = 'Signup successful!';
+        })
+        .catch(error => {
+            document.getElementById('message').innerText = 'Error creating user';
+        });
+    }
+});
+})
+
+document.querySelector('.form-box-login').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const username = document.getElementById('login-username').value;
+    const password = document.getElementById('login-password').value;
+
+    // Fetch users from the JSON server
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(users => {
+            // Check if the user exists and the password matches
+            const user = users.find(user => user.username === username && user.password === password);
+            if (user) {
+                document.getElementById('message').innerText = 'Login successful!';
+                // You can redirect the user or perform other actions here
+            } else {
+                document.getElementById('message').innerText = 'Invalid username or password!';
+            }
+        })
+        .catch(error => {
+            document.getElementById('message').innerText = 'Error fetching users';
+        });
+});
 });
