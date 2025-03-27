@@ -436,7 +436,7 @@ p{
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  transform: scale(0);
+  /*transform: scale(0);*/
   transition:transform .5s ease, height 2s ease;
 
   }
@@ -632,4 +632,86 @@ p{
 
 .testimonial .col-3:hover{
   transform: translateY(-10px);
+}
+
+
+.top-btn{
+  display: block;
+  padding: 10px 30px;
+  background-color: black;
+  border: none;
+  font-size: 16px;
+  color: white;
+  margin: 20px auto 0;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.top-btn a{
+  color: white;
+}
+
+#static-button{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  transition:background 0.5s;
+}
+#static-button:hover{
+  background-color: gold;
+}
+
+
+#static-button a{
+  color: white;
+}
+
+#static-button a:hover{
+  color: black;
+}
+
+#static-top{
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  transition:background 0.5s;
+}
+#static-top:hover{
+  background-color: gold;
+}
+
+
+#static-top a{
+  color: white;
+}
+
+#static-top a:hover{
+  color: black;
+}
+
+#cart-icon{
+  position: fixed;
+  right: 60px;
+  background-color:white;
+  border-radius: 12px;
+}
+.cart-number{
+  position: fixed;
+  right:52px ;
+  color: white;
+  
+
 }

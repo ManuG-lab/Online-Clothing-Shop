@@ -1,25 +1,25 @@
 {
   "featuredProducts": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Adiddas Sweatshirt",
       "price": 3000,
       "image": "assets/ADIDDAS sweatshirt.jpg"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "LeT-Shirt",
       "price": 2000,
       "image": "assets/LeTshirt.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Wedding Gown",
       "price": 20000,
       "image": "assets/wedding gown.jpg"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Black Fedora",
       "price": 3000,
       "image": "assets/black fedora.jpg"
@@ -27,49 +27,49 @@
   ],
   "latestProducts": [
     {
-      "id": 5,
+      "id": "5",
       "name": "Gray Checkered Pant",
       "price": 3000,
       "image": "assets/gray checkered pants.jpg"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Stylish Ripped Jeans",
       "price": 2000,
       "image": "assets/blue ripped jeans.jpg"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Black Jeans",
       "price": 2200,
       "image": "assets/baggy black jeans.jpg"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "BAPE T-Shirt",
       "price": 3000,
       "image": "assets/BAPE shirt.jpg"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Black Heels",
       "price": 4000,
       "image": "assets/black 5 ' heel boots.jpg"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Leather Hat",
       "price": 1500,
       "image": "assets/leather hats.jpg"
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Air Jordan 1's",
       "price": 3500,
       "image": "assets/ Air Jordan shoes.jpg"
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Nike Low 1's",
       "price": 4500,
       "image": "assets/red NIKEs.jpg"
@@ -78,54 +78,55 @@
   "offerSection": [
     {
       "image": "assets/mechanical watch.jpg",
-      "description": "The Oyster Perpetual Cosmograph Daytona in Oystersteel with a white dial and contrasting counter rings. It features an Oyster bracelet and a black Cerachrom bezel with tachymetric scale.A key part of the model’s identity is the bezel moulded with a tachymetric scale for measuring average speeds of up to 400 miles or kilometres per hour. Blending high technology with sleek aesthetics, the black bezel is reminiscent of the 1965 model that was fitted with a black Plexiglas bezel insert.The monobloc Cerachrom bezel in high-tech ceramic offers a number of advantages:<br>it is corrosion resistant, virtually scratchproof and the colour is unaffected by UV rays."
+      "description": "The Oyster Perpetual Cosmograph Daytona in Oystersteel with a white dial and contrasting counter rings. It features an Oyster bracelet and a black Cerachrom bezel with tachymetric scale.A key part of the model’s identity is the bezel moulded with a tachymetric scale for measuring average speeds of up to 400 miles or kilometres per hour. Blending high technology with sleek aesthetics, the black bezel is reminiscent of the 1965 model that was fitted with a black Plexiglas bezel insert.The monobloc Cerachrom bezel in high-tech ceramic offers a number of advantages:<br>it is corrosion resistant, virtually scratchproof and the colour is unaffected by UV rays.",
+      "id": "910c"
     }
   ],
   "pants": [
     {
-      "id": 13,
+      "id": "13",
       "name": "Gray Checkered Pant",
       "price": 3000,
       "image": "assets/gray checkered pants.jpg"
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Stylish Ripped Jeans",
       "price": 2000,
       "image": "assets/blue ripped jeans.jpg"
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Black Jeans",
       "price": 2200,
       "image": "assets/baggy black jeans.jpg"
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Black Sweatpants",
       "price": 2000,
       "image": "assets/black sweatpants.jpg"
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Black Slim Fit Jeans",
       "price": 2200,
       "image": "assets/flim fit jeans.jpg"
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "Slim Fit Jeans",
       "price": 2000,
       "image": "assets/black slim fit jeans.jpg"
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "Khaki Pants",
       "price": 2600,
       "image": "assets/brown khaki pants.jpg"
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "Black Ripped Jeans",
       "price": 2000,
       "image": "assets/baggy ripped black jeans.jpg"
@@ -133,49 +134,49 @@
   ],
   "shoes": [
     {
-      "id": 21,
+      "id": "21",
       "name": "Nike Suave Shoes",
       "price": 3500,
       "image": "assets/NIKE suave shoe.jpg"
     },
     {
-      "id": 22,
+      "id": "22",
       "name": "Black Boots",
       "price": 4500,
       "image": "assets/black leather boots.jpg"
     },
     {
-      "id": 23,
+      "id": "23",
       "name": " Black 6 inch Heels",
       "price": 3500,
       "image": "assets/black 6' heels.jpg"
     },
     {
-      "id": 24,
+      "id": "24",
       "name": "Snake Skin Loafers",
       "price": 12000,
       "image": "assets/snake skin loafers.jpg"
     },
     {
-      "id": 24,
+      "id": "24",
       "name": "Nike Leather Shoes",
       "price": 5000,
       "image": "assets/NIKE leather sneakers.jpg"
     },
     {
-      "id": 26,
+      "id": "26",
       "name": "Brown Vans ",
       "price": 3000,
       "image": "assets/brown VANS.jpg"
     },
     {
-      "id": 27,
+      "id": "27",
       "name": "Off-White Heels",
       "price": 4000,
       "image": "assets/cream heels.jpg"
     },
     {
-      "id": 28,
+      "id": "28",
       "name": "Blue Nike Hightop",
       "price": 6000,
       "image": "assets/blue hightop NIKE.jpg"
@@ -183,49 +184,49 @@
   ],
   "suits": [
     {
-      "id": 29,
+      "id": "29",
       "name": "Red 3 Piece Pant Suit",
       "price": 25000,
       "image": "assets/red 3 piece pant suit.jpg"
     },
     {
-      "id": 30,
+      "id": "30",
       "name": "2 Piece Spotted Tuxedo",
       "price": 45000,
       "image": "assets/2 piece spoted tuxedo.jpg"
     },
     {
-      "id": 31,
+      "id": "31",
       "name": "2 Piece Pant SUit",
       "price": 30000,
       "image": "assets/2 piece black suit.jpg"
     },
     {
-      "id": 32,
+      "id": "32",
       "name": "Black 2 Piece Suit",
       "price": 32000,
       "image": "assets/black 2 piece suit.jpg"
     },
     {
-      "id": 33,
+      "id": "33",
       "name": "Black Tuxedo",
       "price": 42000,
       "image": "assets/black tuxedo.jpg"
     },
     {
-      "id": 34,
+      "id": "34",
       "name": "Green 2 Piece Tuxedo",
       "price": 50000,
       "image": "assets/green 2 piece suit.jpg"
     },
     {
-      "id": 25,
+      "id": "25",
       "name": "Custom Kitenge Suit",
       "price": 55000,
       "image": "assets/kitenge suit.jpg"
     },
     {
-      "id": 36,
+      "id": "36",
       "name": "Linnen Pant Suit",
       "price": 3000,
       "image": "assets/linen pant suit.jpg"
@@ -233,49 +234,49 @@
   ],
   "accessories": [
     {
-      "id": 37,
+      "id": "37",
       "name": "Sisal Fedora",
       "price": 3200,
       "image": "assets/sisal fedora.jpg"
     },
     {
-      "id": 38,
+      "id": "38",
       "name": "White Diamond Ring",
       "price": 47000,
       "image": "assets/white diamond ring.jpg"
     },
     {
-      "id": 39,
+      "id": "39",
       "name": "Pure Silver Ring",
       "price": 30000,
       "image": "assets/white silver ring.jpg"
     },
     {
-      "id": 40,
+      "id": "40",
       "name": "Stylish Ripped Jeans",
       "price": 2000,
       "image": "assets/blue ripped jeans.jpg"
     },
     {
-      "id": 41,
+      "id": "41",
       "name": "Silver Rolex",
       "price": 22000,
       "image": "assets/silver rolex watch.jpg"
     },
     {
-      "id": 42,
+      "id": "42",
       "name": "Blue Emerald Necklace",
       "price": 20000,
       "image": "assets/blue emerald necklace.jpg"
     },
     {
-      "id": 43,
+      "id": "43",
       "name": "Blue Earrings",
       "price": 1500,
       "image": "assets/blue earings.jpg"
     },
     {
-      "id": 44,
+      "id": "44",
       "name": "Gold Frame Shades",
       "price": 3500,
       "image": "assets/gold sunglasses.jpg"
@@ -283,19 +284,32 @@
   ],
   "users": [
     {
-      "id": 1743077399019,
+      "id": "1743077399019",
       "username": "Bill",
       "password": "Bill"
     },
     {
-      "id": 1743077446590,
+      "id": "1743077446590",
       "username": "Kendrick-30",
       "password": "Kendrick"
     },
     {
-      "id": 1743077554323,
+      "id": "1743077554323",
       "username": "Job-30",
       "password": "Job"
+    },
+    {
+      "id": "1743082556762",
+      "username": "mannu-g",
+      "password": "mannu"
+    },
+    {
+      "id": "1743082633198",
+      "username": "gitau-2025",
+      "password": "gitz"
     }
+  ],
+  "carts": [
+    
   ]
 }

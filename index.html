@@ -14,13 +14,13 @@
 <div class="header">
     <div class="container">
     <div class="navbar">
-        <div class="logo">
+        <div class="logo" id="logo">
             <img src="assets/woman.png" alt="logo" width="125px">
         </div>
         <nav>
             <uL>
                 <LI><a href="">Home</a></LI>
-                <LI><a href="">Products</a></LI>
+                <LI><a href="#products">Products</a></LI>
                 <LI><a href="">About</a></LI>
                 <LI><a href="">Contact</a></LI>
                 <LI><button class="btnPopUp">Account</button></LI>
@@ -61,12 +61,12 @@
     <div class="remember-forgot">
     <label><input type="checkbox">
     Remember Me</label><br>
-    <a href="#">Forgot Pasword?</a>
+    <a href="#" id="login-a">Forgot Pasword?</a>
     </div>
     <button type="submit" class="button">Login</button>
     <div class="login-register">
     <p>Don't have an account? 
-    <a href="#" class="register-link">Register</a></p>
+    <a href="#" class="register-link" id="login-a">Register</a></p>
     </div>
     </form>
     <div id="message-login"></div>
@@ -97,7 +97,7 @@
         <button type="submit" class="button">Register</button>
         <div class="login-register">
         <p>Already have an account? 
-        <a href="#" class="login-link">Login</a></p>
+        <a href="#" class="login-link"  id="login-a">Login</a></p>
         </div>
         </form>
 
@@ -115,7 +115,7 @@
             <div class="total-title">Total</div>
             <div class="total-price">KSH 0</div>
         </div>
-        <button class="btn-buy">Buy Now</button>
+        <button class="btn-buy" id="save-cart">Buy Now</button>
         <button id="cart-close">X</button>
 
     </div>
@@ -167,7 +167,7 @@
 
     <!-----------------Main Products----------------->
     <div class="small-container">
-        <h2>Products</h2>
+        <h2 id="products">Products</h2>
 
         <ul class="pageLinks">
              <a href="#pants"><li>Pants</li></a> 
@@ -197,7 +197,10 @@
         <span>3</span>
         <span>4</span>
         <span>&#8594</span>
+
+        <button class="top-btn"> <a href="#logo">Back to top</a></button>
     </div>
+
 
     <!----------Reviews---------------->
 <div class="testimonial">
@@ -262,7 +265,7 @@
                 </div>
             </div>
             <div class="footer-col-2">
-                <img src="assets/woman.png" alt="">
+                <img src="assets/woman.png" alt="" id="logo">
                 <p>Stylish, high-quality fashion that empowers self-expression and fits every lifestyle. Designed for confidence, made for you.</p>
             </div>
             <div class="footer-col-3">
@@ -287,5 +290,8 @@
     </div>
 </div>
 
+<!---------------ID buttons---------------->
+<button id="static-button"><a href="#products">Go to Products</a></button>
+<button id="static-top"><a href="#logo">Go to Top</a></button>
 </body>
 </html>

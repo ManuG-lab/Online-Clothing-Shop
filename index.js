@@ -1,11 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     //--------load featured products-----------
-let carts =[];
-//let cartContent = document.querySelector(".cart-content")
-let cartNumber = document.querySelector(".cart-number")
-
-
+    let carts =[]
 let productContainer = document.querySelector("#featured-products")
 function renderOneProduct(product){
     let div = document.createElement("div");
@@ -18,7 +14,68 @@ function renderOneProduct(product){
     <button class="btn">Add to Cart</button>
     `;
 
+    div.querySelector(".btn").addEventListener("click", () =>{
+       addToCart(product)
+    })
+    
+
 productContainer.append(div);
+
+function addToCart(product){
+    const existingIndex = carts.findIndex(item => item.id === product.id);
+
+    if(existingIndex > -1){
+        carts[existingIndex].quantity += 1;
+    }else{
+        carts.push({ ...product, quantity: 1});
+    }
+
+    console.log(carts);
+    updateCartDisplay();
+}
+function updateCartDisplay(){
+    const cartContent = document.querySelector(".cart-content")
+    
+    if(carts.length > 0){
+        carts.forEach(item => {
+            const cartBox = document.createElement("div")
+            cartBox.className = "cart-box"
+            cartBox.innerHTML =`
+             <img src ="${item.image}"
+             <h4 class="cart-product-title">${item.name}</h4>
+             <p class="cart-price">Price: KSH ${item.price}</p>
+             <p class="cart-quantity">Quantity: ${item.quantity}</p>
+            `;
+            cartContent.append(cartBox)
+    
+        });
+    }else{
+        cartContent.innerHTML = "<p>Your cart is empty</p>"
+    }
+}
+
+function saveToServer(){
+    fetch("http://localhost:3000/carts", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body:JSON.stringify(carts)
+    })
+    .then(response => {
+        if(!response.ok){
+            throw new Error("Network response not ok");
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log("cart saved")
+    })
+    .catch(error => {
+        console.log("error saving cart")
+    })
+}
+ document.getElementById("save-cart").addEventListener("click", saveToServer)
 
 let button = div.querySelector(".btn")
 button.addEventListener("click", () => {
@@ -105,9 +162,11 @@ button.addEventListener("click", () => {
      <p>Exclusively Available on VougeNest</p>
      <h1>Rolex Daytona - The triumph of endurance</h1>
      <img src = "${offer.image}" class="offer-img">
-     <small"> ${offer.description}</small><br>
+     <small> ${offer.description}</small><br>
       <button class = "btn">Buy Now</button>
     `;
+   
+
     
     offerContainer.append(div);
     
@@ -363,7 +422,7 @@ iconClose.addEventListener("click", () => {
     wrapper.classList.remove("active-popup");
 });
 
-document.querySelectorAll("a").forEach(link => {
+document.querySelectorAll("#login-a").forEach(link => {
     link.addEventListener("click", function(event){
         event.preventDefault();
     })
@@ -435,4 +494,6 @@ document.querySelector('.form-box-login').addEventListener('submit', function(ev
             document.getElementById('message-login').innerText = 'Error fetching users';
         });
 });
+
+
 });
