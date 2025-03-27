@@ -49,9 +49,13 @@ function decrementFromCart(productId) {
     updateCartDisplay();
 }
 
+function calculateTotalPrice() {
+    return carts.reduce((total, item) => total + item.price * item.quantity, 0);
+}
+
 function updateCartDisplay(){
     const cartContent = document.querySelector(".cart-content")
-    
+    const totalPriceElement = document.querySelector(".total-price");
     cartContent.innerHTML = "";
     if(carts.length > 0){
         carts.forEach(item => {
@@ -73,6 +77,7 @@ function updateCartDisplay(){
             cartContent.append(cartBox)
     
         });
+        totalPriceElement.textContent = `KSH ${calculateTotalPrice()}`;
     }else{
         cartContent.innerHTML = "<p>Your cart is empty</p>"
     }
@@ -179,9 +184,14 @@ function getAllProducts(){
         console.log(carts);
         updateCartDisplay();
     }
+
+    function calculateTotalPrice() {
+        return carts.reduce((total, item) => total + item.price * item.quantity, 0);
+    }
+
     function updateCartDisplay(){
         const cartContent = document.querySelector(".cart-content")
-        
+        const totalPriceElement = document.querySelector(".total-price");
         cartContent.innerHTML = "";
         if(carts.length > 0){
             carts.forEach(item => {
@@ -202,6 +212,7 @@ function getAllProducts(){
                 cartContent.append(cartBox)
         
             });
+            totalPriceElement.textContent = `KSH ${calculateTotalPrice()}`;
         }else{
             cartContent.innerHTML = "<p>Your cart is empty</p>"
         }
@@ -353,9 +364,14 @@ button.addEventListener("click", () => {
         console.log(carts);
         updateCartDisplay();
     }
+
+    function calculateTotalPrice() {
+        return carts.reduce((total, item) => total + item.price * item.quantity, 0);
+    }
+
     function updateCartDisplay(){
         const cartContent = document.querySelector(".cart-content")
-        
+        const totalPriceElement = document.querySelector(".total-price");
         cartContent.innerHTML = "";
         if(carts.length > 0){
             carts.forEach(item => {
@@ -376,6 +392,7 @@ button.addEventListener("click", () => {
                 cartContent.append(cartBox)
         
             });
+            totalPriceElement.textContent = `KSH ${calculateTotalPrice()}`;
         }else{
             cartContent.innerHTML = "<p>Your cart is empty</p>"
         }
@@ -482,9 +499,15 @@ button.addEventListener("click", () => {
         console.log(carts);
         updateCartDisplay();
     }
+
+    function calculateTotalPrice() {
+        return carts.reduce((total, item) => total + item.price * item.quantity, 0);
+    }
+
+
     function updateCartDisplay(){
         const cartContent = document.querySelector(".cart-content")
-        
+        const totalPriceElement = document.querySelector(".total-price");
         cartContent.innerHTML = "";
         if(carts.length > 0){
             carts.forEach(item => {
@@ -505,6 +528,7 @@ button.addEventListener("click", () => {
                 cartContent.append(cartBox)
         
             });
+            totalPriceElement.textContent = `KSH ${calculateTotalPrice()}`;
         }else{
             cartContent.innerHTML = "<p>Your cart is empty</p>"
         }
@@ -612,9 +636,15 @@ button.addEventListener("click", () => {
         console.log(carts);
         updateCartDisplay();
     }
+
+    function calculateTotalPrice() {
+        return carts.reduce((total, item) => total + item.price * item.quantity, 0);
+    }
+
+
     function updateCartDisplay(){
         const cartContent = document.querySelector(".cart-content")
-        
+        const totalPriceElement = document.querySelector(".total-price");
         cartContent.innerHTML = "";
         if(carts.length > 0){
             carts.forEach(item => {
@@ -635,6 +665,7 @@ button.addEventListener("click", () => {
                 cartContent.append(cartBox)
         
             });
+            totalPriceElement.textContent = `KSH ${calculateTotalPrice()}`;
         }else{
             cartContent.innerHTML = "<p>Your cart is empty</p>"
         }
@@ -742,9 +773,15 @@ button.addEventListener("click", () => {
         console.log(carts);
         updateCartDisplay();
     }
+
+    function calculateTotalPrice() {
+        return carts.reduce((total, item) => total + item.price * item.quantity, 0);
+    }
+
+
     function updateCartDisplay(){
         const cartContent = document.querySelector(".cart-content")
-        
+        const totalPriceElement = document.querySelector(".total-price");
         cartContent.innerHTML = "";
         if(carts.length > 0){
             carts.forEach(item => {
@@ -765,6 +802,7 @@ button.addEventListener("click", () => {
                 cartContent.append(cartBox)
         
             });
+            totalPriceElement.textContent = `KSH ${calculateTotalPrice()}`;
         }else{
             cartContent.innerHTML = "<p>Your cart is empty</p>"
         }
