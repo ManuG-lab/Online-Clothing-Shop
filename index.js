@@ -33,6 +33,22 @@ function addToCart(product){
     console.log(carts);
     updateCartDisplay();
 }
+
+function decrementFromCart(productId) {
+    const existingIndex = carts.findIndex(item => item.id === productId);
+
+    if (existingIndex > -1) {
+        if (carts[existingIndex].quantity > 1) {
+            carts[existingIndex].quantity -= 1;
+        } else {
+            carts.splice(existingIndex, 1); // Remove item if quantity is 0
+        }
+    }
+
+    console.log(carts);
+    updateCartDisplay();
+}
+
 function updateCartDisplay(){
     const cartContent = document.querySelector(".cart-content")
     
@@ -46,7 +62,14 @@ function updateCartDisplay(){
              <h4 class="cart-product-title">${item.name}</h4>
              <p class="cart-price">Price: KSH ${item.price}</p>
              <p class="cart-quantity">Quantity: ${item.quantity}</p>
+            <button class="decrement-btn">-</button>
             `;
+
+            cartBox.querySelector(".decrement-btn").addEventListener("click", () => {
+                decrementFromCart(item.id);
+            });
+
+            
             cartContent.append(cartBox)
     
         });
@@ -142,6 +165,20 @@ function getAllProducts(){
         console.log(carts);
         updateCartDisplay();
     }
+    function decrementFromCart(latestId) {
+        const existingIndex = carts.findIndex(item => item.id === latestId);
+    
+        if (existingIndex > -1) {
+            if (carts[existingIndex].quantity > 1) {
+                carts[existingIndex].quantity -= 1;
+            } else {
+                carts.splice(existingIndex, 1); // Remove item if quantity is 0
+            }
+        }
+    
+        console.log(carts);
+        updateCartDisplay();
+    }
     function updateCartDisplay(){
         const cartContent = document.querySelector(".cart-content")
         
@@ -155,7 +192,13 @@ function getAllProducts(){
                  <h4 class="cart-product-title">${item.name}</h4>
                  <p class="cart-price">Price: KSH ${item.price}</p>
                  <p class="cart-quantity">Quantity: ${item.quantity}</p>
+                 <button class="decrement-btn">-</button>
                 `;
+
+                cartBox.querySelector(".decrement-btn").addEventListener("click", () => {
+                    decrementFromCart(item.id);
+                });
+    
                 cartContent.append(cartBox)
         
             });
@@ -295,6 +338,21 @@ button.addEventListener("click", () => {
         console.log(carts);
         updateCartDisplay();
     }
+
+    function decrementFromCart(pantsId) {
+        const existingIndex = carts.findIndex(item => item.id === pantsId);
+    
+        if (existingIndex > -1) {
+            if (carts[existingIndex].quantity > 1) {
+                carts[existingIndex].quantity -= 1;
+            } else {
+                carts.splice(existingIndex, 1); // Remove item if quantity is 0
+            }
+        }
+    
+        console.log(carts);
+        updateCartDisplay();
+    }
     function updateCartDisplay(){
         const cartContent = document.querySelector(".cart-content")
         
@@ -308,7 +366,13 @@ button.addEventListener("click", () => {
                  <h4 class="cart-product-title">${item.name}</h4>
                  <p class="cart-price">Price: KSH ${item.price}</p>
                  <p class="cart-quantity">Quantity: ${item.quantity}</p>
+                 <button class="decrement-btn">-</button>
                 `;
+
+                cartBox.querySelector(".decrement-btn").addEventListener("click", () => {
+                    decrementFromCart(item.id);
+                });
+    
                 cartContent.append(cartBox)
         
             });
@@ -403,6 +467,21 @@ button.addEventListener("click", () => {
         console.log(carts);
         updateCartDisplay();
     }
+
+    function decrementFromCart(shoesId) {
+        const existingIndex = carts.findIndex(item => item.id === shoesId);
+    
+        if (existingIndex > -1) {
+            if (carts[existingIndex].quantity > 1) {
+                carts[existingIndex].quantity -= 1;
+            } else {
+                carts.splice(existingIndex, 1); // Remove item if quantity is 0
+            }
+        }
+    
+        console.log(carts);
+        updateCartDisplay();
+    }
     function updateCartDisplay(){
         const cartContent = document.querySelector(".cart-content")
         
@@ -416,7 +495,13 @@ button.addEventListener("click", () => {
                  <h4 class="cart-product-title">${item.name}</h4>
                  <p class="cart-price">Price: KSH ${item.price}</p>
                  <p class="cart-quantity">Quantity: ${item.quantity}</p>
+                 <button class="decrement-btn">-</button>
                 `;
+
+                cartBox.querySelector(".decrement-btn").addEventListener("click", () => {
+                    decrementFromCart(item.id);
+                });
+    
                 cartContent.append(cartBox)
         
             });
@@ -512,6 +597,21 @@ button.addEventListener("click", () => {
         console.log(carts);
         updateCartDisplay();
     }
+
+    function decrementFromCart(suitsId) {
+        const existingIndex = carts.findIndex(item => item.id === suitsId);
+    
+        if (existingIndex > -1) {
+            if (carts[existingIndex].quantity > 1) {
+                carts[existingIndex].quantity -= 1;
+            } else {
+                carts.splice(existingIndex, 1); // Remove item if quantity is 0
+            }
+        }
+    
+        console.log(carts);
+        updateCartDisplay();
+    }
     function updateCartDisplay(){
         const cartContent = document.querySelector(".cart-content")
         
@@ -525,7 +625,13 @@ button.addEventListener("click", () => {
                  <h4 class="cart-product-title">${item.name}</h4>
                  <p class="cart-price">Price: KSH ${item.price}</p>
                  <p class="cart-quantity">Quantity: ${item.quantity}</p>
+                 <button class="decrement-btn">-</button>
                 `;
+
+                cartBox.querySelector(".decrement-btn").addEventListener("click", () => {
+                    decrementFromCart(item.id);
+                });
+    
                 cartContent.append(cartBox)
         
             });
@@ -621,6 +727,21 @@ button.addEventListener("click", () => {
         console.log(carts);
         updateCartDisplay();
     }
+
+    function decrementFromCart(accessoriesId) {
+        const existingIndex = carts.findIndex(item => item.id === accessoriesId);
+    
+        if (existingIndex > -1) {
+            if (carts[existingIndex].quantity > 1) {
+                carts[existingIndex].quantity -= 1;
+            } else {
+                carts.splice(existingIndex, 1); // Remove item if quantity is 0
+            }
+        }
+    
+        console.log(carts);
+        updateCartDisplay();
+    }
     function updateCartDisplay(){
         const cartContent = document.querySelector(".cart-content")
         
@@ -634,7 +755,13 @@ button.addEventListener("click", () => {
                  <h4 class="cart-product-title">${item.name}</h4>
                  <p class="cart-price">Price: KSH ${item.price}</p>
                  <p class="cart-quantity">Quantity: ${item.quantity}</p>
+                 <button class="decrement-btn">-</button>
                 `;
+
+                cartBox.querySelector(".decrement-btn").addEventListener("click", () => {
+                    decrementFromCart(item.id);
+                });
+    
                 cartContent.append(cartBox)
         
             });
