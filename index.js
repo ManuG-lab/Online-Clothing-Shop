@@ -53,6 +53,15 @@ function calculateTotalPrice() {
     return carts.reduce((total, item) => total + item.price * item.quantity, 0);
 }
 
+function updateCartCount() {
+    const cartCountElement = document.querySelector(".cart-count");
+    
+    if (!cartCountElement) return; 
+    
+    const totalItems = carts.reduce((sum, item) => sum + item.quantity, 0);
+    cartCountElement.textContent = totalItems; 
+}
+
 function updateCartDisplay(){
     const cartContent = document.querySelector(".cart-content")
     const totalPriceElement = document.querySelector(".total-price");
