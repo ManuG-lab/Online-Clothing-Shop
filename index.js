@@ -41,7 +41,7 @@ function decrementFromCart(productId) {
         if (carts[existingIndex].quantity > 1) {
             carts[existingIndex].quantity -= 1;
         } else {
-            carts.splice(existingIndex, 1); // Remove item if quantity is 0
+            carts.splice(existingIndex, 1); 
         }
     }
 
@@ -81,6 +81,8 @@ function updateCartDisplay(){
     }else{
         cartContent.innerHTML = "<p>Your cart is empty</p>"
     }
+
+    updateCartCount();
 }
 
 function saveToServer(){
@@ -177,7 +179,7 @@ function getAllProducts(){
             if (carts[existingIndex].quantity > 1) {
                 carts[existingIndex].quantity -= 1;
             } else {
-                carts.splice(existingIndex, 1); // Remove item if quantity is 0
+                carts.splice(existingIndex, 1); 
             }
         }
     
@@ -187,6 +189,15 @@ function getAllProducts(){
 
     function calculateTotalPrice() {
         return carts.reduce((total, item) => total + item.price * item.quantity, 0);
+    }
+
+    function updateCartCount() {
+        const cartCountElement = document.querySelector(".cart-count");
+        
+        if (!cartCountElement) return; 
+        
+        const totalItems = carts.reduce((sum, item) => sum + item.quantity, 0);
+        cartCountElement.textContent = totalItems; 
     }
 
     function updateCartDisplay(){
@@ -216,6 +227,8 @@ function getAllProducts(){
         }else{
             cartContent.innerHTML = "<p>Your cart is empty</p>"
         }
+
+        updateCartCount();
     }
 
     function saveToServer(){
@@ -357,7 +370,7 @@ button.addEventListener("click", () => {
             if (carts[existingIndex].quantity > 1) {
                 carts[existingIndex].quantity -= 1;
             } else {
-                carts.splice(existingIndex, 1); // Remove item if quantity is 0
+                carts.splice(existingIndex, 1); 
             }
         }
     
@@ -367,6 +380,15 @@ button.addEventListener("click", () => {
 
     function calculateTotalPrice() {
         return carts.reduce((total, item) => total + item.price * item.quantity, 0);
+    }
+
+    function updateCartCount() {
+        const cartCountElement = document.querySelector(".cart-count");
+        
+        if (!cartCountElement) return; 
+        
+        const totalItems = carts.reduce((sum, item) => sum + item.quantity, 0);
+        cartCountElement.textContent = totalItems; 
     }
 
     function updateCartDisplay(){
@@ -396,6 +418,8 @@ button.addEventListener("click", () => {
         }else{
             cartContent.innerHTML = "<p>Your cart is empty</p>"
         }
+
+        updateCartCount();
     }
     
     function saveToServer(){
@@ -492,7 +516,7 @@ button.addEventListener("click", () => {
             if (carts[existingIndex].quantity > 1) {
                 carts[existingIndex].quantity -= 1;
             } else {
-                carts.splice(existingIndex, 1); // Remove item if quantity is 0
+                carts.splice(existingIndex, 1); 
             }
         }
     
@@ -502,6 +526,15 @@ button.addEventListener("click", () => {
 
     function calculateTotalPrice() {
         return carts.reduce((total, item) => total + item.price * item.quantity, 0);
+    }
+
+    function updateCartCount() {
+        const cartCountElement = document.querySelector(".cart-count");
+        
+        if (!cartCountElement) return; 
+        
+        const totalItems = carts.reduce((sum, item) => sum + item.quantity, 0);
+        cartCountElement.textContent = totalItems; 
     }
 
 
@@ -532,6 +565,8 @@ button.addEventListener("click", () => {
         }else{
             cartContent.innerHTML = "<p>Your cart is empty</p>"
         }
+
+        updateCartCount();
     }
     
     function saveToServer(){
@@ -629,7 +664,7 @@ button.addEventListener("click", () => {
             if (carts[existingIndex].quantity > 1) {
                 carts[existingIndex].quantity -= 1;
             } else {
-                carts.splice(existingIndex, 1); // Remove item if quantity is 0
+                carts.splice(existingIndex, 1); 
             }
         }
     
@@ -639,6 +674,15 @@ button.addEventListener("click", () => {
 
     function calculateTotalPrice() {
         return carts.reduce((total, item) => total + item.price * item.quantity, 0);
+    }
+
+    function updateCartCount() {
+        const cartCountElement = document.querySelector(".cart-count");
+        
+        if (!cartCountElement) return; 
+        
+        const totalItems = carts.reduce((sum, item) => sum + item.quantity, 0);
+        cartCountElement.textContent = totalItems; 
     }
 
 
@@ -669,6 +713,8 @@ button.addEventListener("click", () => {
         }else{
             cartContent.innerHTML = "<p>Your cart is empty</p>"
         }
+
+        updateCartCount();
     }
     
     function saveToServer(){
@@ -766,7 +812,7 @@ button.addEventListener("click", () => {
             if (carts[existingIndex].quantity > 1) {
                 carts[existingIndex].quantity -= 1;
             } else {
-                carts.splice(existingIndex, 1); // Remove item if quantity is 0
+                carts.splice(existingIndex, 1); 
             }
         }
     
@@ -777,6 +823,15 @@ button.addEventListener("click", () => {
     function calculateTotalPrice() {
         return carts.reduce((total, item) => total + item.price * item.quantity, 0);
     }
+
+    function updateCartCount() {
+        const cartCountElement = document.querySelector(".cart-count");
+        
+        if (!cartCountElement) return; 
+        
+        const totalItems = carts.reduce((sum, item) => sum + item.quantity, 0);
+        cartCountElement.textContent = totalItems; 
+    }    
 
 
     function updateCartDisplay(){
@@ -806,6 +861,8 @@ button.addEventListener("click", () => {
         }else{
             cartContent.innerHTML = "<p>Your cart is empty</p>"
         }
+
+        updateCartCount();
     }
     
     function saveToServer(){
