@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     //--------load featured products-----------
+let carts =[];
+//let cartContent = document.querySelector(".cart-content")
+let cartNumber = document.querySelector(".cart-number")
+
 
 let productContainer = document.querySelector("#featured-products")
 function renderOneProduct(product){
@@ -32,7 +36,6 @@ button.addEventListener("click", () => {
 })
 }
 
-
 function getAllProducts(){
     fetch("http://localhost:3000/featuredProducts")
     .then(res => res.json())
@@ -41,6 +44,8 @@ function getAllProducts(){
         featuredProducts.forEach(product => 
             renderOneProduct(product))
     });
+
+
 }
 
 
@@ -327,6 +332,8 @@ const cartClose = document.querySelector("#cart-close")
 
 cartIcon.addEventListener("click", () => cart.classList.add("active"));
 cartClose.addEventListener("click", () => cart.classList.remove("active"));
+
+
 
 
 
