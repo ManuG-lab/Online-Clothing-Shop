@@ -595,7 +595,7 @@ p{
             list-style-type: none;
           }
           
-          .pageLinks li{
+          .pageLinks a{
             display: inline-block;
             margin-left: 150px;
             margin-bottom: 100px;
@@ -605,7 +605,7 @@ p{
             cursor: pointer;
           }
 
-          .pageLinks li:hover{
+          .pageLinks a:hover{
             color: gold;
           }
 
