@@ -34,6 +34,7 @@ button.addEventListener("click", () => {
         button.style.color = "white"
     },1000);
 })
+
 }
 
 function getAllProducts(){
@@ -337,6 +338,7 @@ cartClose.addEventListener("click", () => cart.classList.remove("active"));
 
 
 
+
 //--------------------login page------------------
 
 const wrapper = document.querySelector(".wrapper")
@@ -370,12 +372,13 @@ document.querySelectorAll("a").forEach(link => {
 const apiUrl = "http://localhost:3000/users"
 
 
-const username = document.getElementById('register-username').value;
-const password = document.getElementById('register-password').value;
+
 
 document.querySelector(".form-box-register").addEventListener("submit",function(event){
     event.preventDefault();
 
+const username = document.getElementById('register-username').value;
+const password = document.getElementById('register-password').value;
 
 fetch(apiUrl)
 .then(response => response.json())
@@ -385,21 +388,24 @@ fetch(apiUrl)
         document.getElementById('message').innerText = 'User  already exists!';
     } else {
         // Save new user
-        const newUser  = { username, password };
+        const newUser  = {
+            id:Date.now(),
+            username: username,
+            password: password
+        };
         fetch(apiUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(newUser )
+            body: JSON.stringify(newUser)
         })
         .then(response => response.json())
         .then(data => {
             document.getElementById('message').innerText = 'Signup successful!';
+            document.querySelector(".form-box-register").reset();
         })
-        .catch(error => {
-            document.getElementById('message').innerText = 'Error creating user';
-        });
+       
     }
 });
 })
@@ -417,14 +423,16 @@ document.querySelector('.form-box-login').addEventListener('submit', function(ev
             // Check if the user exists and the password matches
             const user = users.find(user => user.username === username && user.password === password);
             if (user) {
-                document.getElementById('message').innerText = 'Login successful!';
+                document.getElementById('message-login').innerText = 'Login successful!';
+                
+                
                 // You can redirect the user or perform other actions here
             } else {
-                document.getElementById('message').innerText = 'Invalid username or password!';
+                document.getElementById('message-login').innerText = 'Invalid username or password!';
             }
         })
         .catch(error => {
-            document.getElementById('message').innerText = 'Error fetching users';
+            document.getElementById('message-login').innerText = 'Error fetching users';
         });
 });
 });
